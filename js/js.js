@@ -324,6 +324,11 @@ $(document).ready(function() {
     console.log(overallPlayOne);
     $('#addOverallScore').html(overallPlayOne);
     $('#addCurrentScore').html(sumTurns);
+    if (ty==1 ) {
+      $( "#alert" ).fadeIn();
+    } else if (ty!=1) {
+      $( "#alert" ).fadeOut();
+    }
   });
 
   //computer part does not work for now
@@ -348,6 +353,11 @@ $(document).ready(function() {
     var overallPlayerTwo = PlayerTwoChance(ty)
     $('#addOverallScore2').html(overallPlayerTwo);
     $('#addCurrentScore2').html(sumTurns2);
+    if (ty==1 ) {
+      $( "#alert" ).fadeIn();
+    } else if (ty!=1) {
+      $( "#alert" ).fadeOut();
+    }
   });
 
   //actions when pass to other player for player one is clicked
@@ -376,4 +386,14 @@ $(document).ready(function() {
     $('#addOverallScore2').html(zero);
     $('#addCurrentScore2').html(zero);
   });
+  $("#rule").click(function() {
+    $( ".rules" ).fadeIn();
+
+  });
+  $("#rule").mousedown(function() {
+    $(".rules").fadeOut(400);
+    $(".rules").hide();
+
+  });
+
 });

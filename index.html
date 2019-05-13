@@ -10,11 +10,31 @@
   <script src="js/underscore.js" type="text/javascript"></script>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
+  <style type="text/css">
+    @font-face {
+      font-family: GreatVibes;
+      src: url("font/GreatVibes-Regular.otf")format("opentype");
+    }
+    h1{
+      font-family: GreatVibes;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #000;
+      line-height: 0.1em;
+      margin: 45px auto 55px auto;
+      font-size: 200%;
+    }
+    h1 span{
+      background: #fff;
+      padding: 0 10px;
+    }
+  </style>
   </head>
 <div class="container-fluid">
-  <div class="row" id="playerone">
-    
-    <div class="col-md-4">
+  <h1><span>The Pig Dice</span></h1>
+
+  <div class="row" >
+    <div class="col-md-4" id="playerone">
       <form class="form" action="index.html" method="post">
         <div class="form-group">
           <h3>Player One</h3>
@@ -24,10 +44,14 @@
           <button type="button" name="button" id="remove" class="btn btn-primary">Pass to Other Player</button>
         </div>
         </form>
-      </form>
+        </div>
 
-    </div>
-    <div class="col-md-4 rules">
+
+
+
+
+    <!-- card holding the rules of the game -->
+    <div class="col-md-4 card rules">
       <div class="card-body">
         <h1 class="card-title"><span>Rules</span></h1>
         <p class="card-text">The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the die to the next player.Play passes from player to player until a winner is determined.</p>
@@ -35,6 +59,7 @@
     </div>
     </div>
 
+    <!-- these are the player two details form -->
     <div class="col-md-4">
       <form class="form" action="index.html" method="post">
         <div class="form-group">
@@ -49,10 +74,11 @@
 
 
   </div>
+  </div>
 
 
 </div>
-  <body>
+
 
   </body>
 </html>

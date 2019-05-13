@@ -329,6 +329,16 @@ $(document).ready(function() {
     } else if (ty!=1) {
       $( "#alert" ).fadeOut();
     }
+    if(overallPlayOne==100){
+      $('#win').show();
+      overallPlayerOne.length = 0;
+      overallPlayerTwo.length = 0;
+      turnsPlayerOne.length = 0;
+      turnsPlayerTwo.length=0;
+
+    }else{
+
+    }
   });
 
   //computer part does not work for now
@@ -359,6 +369,16 @@ $(document).ready(function() {
       $( "#alert" ).fadeOut();
     }
   });
+  if(overallPlayOne==100){
+    $('#win').show();
+    overallPlayerOne.length = 0;
+    overallPlayerTwo.length = 0;
+    turnsPlayerOne.length = 0;
+    turnsPlayerTwo.length=0;
+
+  }else{
+
+  }
 
   //actions when pass to other player for player one is clicked
   $("#remove").click(function() {
@@ -388,6 +408,19 @@ $(document).ready(function() {
   });
   $("#rule").click(function() {
     $( ".rules" ).fadeIn();
+
+  });
+  $("#win").click(function() {
+    $( "#win" ).fadeOut();
+    overallPlayerOne.length = 0;
+    overallPlayerTwo.length = 0;
+    turnsPlayerOne.length = 0;
+    turnsPlayerTwo.length=0;
+    var zero=0;
+    $('#addOverallScore').html(zero);
+    $('#addCurrentScore').html(zero);
+    $('#addOverallScore2').html(zero);
+    $('#addCurrentScore2').html(zero);
 
   });
   $("#rule").mousedown(function() {

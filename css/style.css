@@ -76,33 +76,57 @@ img{
   display:none;
   font-family: 'Lora', serif;
 }
-#add2{
-
+.alert{
+  display: flex;
+  justify-content: center;
 }
 #alert{
   display: none;
   color:#7b0e8c;
-  margin-left: 500px;
-  margin-right: 250px;
+
   font-family: 'Lora', serif;
 }
 .heading{
   font-family: 'Lora', serif;
 }
 #newgame{
+  text-align: center;
   font-size:175%;
-  margin-left:560px;
-  margin-right:300px;
+  margin-top: 15px;
+  width:200px;
+
   font-family: 'Lora', serif;
+}
+.newgame{
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+}
+.rule{
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 #rule{
 
   border-width: thin;
-  width: 70px;
-  margin-left:   600px;
-  margin-right: 250px;
+  width: 80px;
+
   font-family: 'Lora', serif;
   background-color:#efedef;
+}
+.win{
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+#win{
+  display: none;
+  color:#7b0e8c;
+  margin-bottom: 35px;
 }
 
 #remove{
@@ -215,13 +239,24 @@ img{
   transform: translateX(8px);
 }
 @media screen and (max-width: 768px) {
+  body{
+    overflow: scroll;
+    overflow-x: hidden;
+  }
 #newgame{
   margin-left: 200px;
   margin-right: 200px
 }
+
+.alert{
+  display: flex;
+  justify-content: center;
+}
 #alert{
-  margin-left: 200px;
-  margin-right:200px;
+
+  color:#7b0e8c;
+  font-size: 110%;
+  font-family: 'Lora', serif;
 }
 #rule{
   margin-left: 200px;

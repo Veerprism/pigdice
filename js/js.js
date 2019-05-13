@@ -34,6 +34,7 @@ var turnsPlayerOne = []  //points accumulating in each turn when the player roll
 var turnsPlayerTwo = []   //points accumulating in each turn when the player rolls
 var turnsComputer=[]
 var tr = overallPlayerOne.length
+
 var sumTurns;
 var sumTurns2;
 
@@ -109,11 +110,9 @@ function PlayerOneChance(randomNum) {
         return sum
       }
       //if the sum is more than 100,alert the user
-      else if (sum >= 100) {
-        alert('The sum is' + sum);
-        ending = false;
-        break
-        return false;
+      else if (sum >= 100){
+
+        return sum;
       }
       else if (sum === undefined) {
         console.log('end');
@@ -124,7 +123,7 @@ function PlayerOneChance(randomNum) {
         return console.log("at ten");
       }
     }
-    else {
+    else{
       console.log('the sum is' + sum);
       break
 
@@ -201,10 +200,8 @@ function PlayerTwoChance(randomNum) {
       }
       //if the sum is more than 100,alert the user
       else if (sum >= 100) {
-        alert('The sum is' + sum);
-        ending = false;
-        break
-        return false;
+
+        return sum;
       }
 
       else if (sum === undefined) {
@@ -312,7 +309,7 @@ function Computer(randomNum){
 }
 var playOn=true;
 var overallPlayOne;
-
+var overallPlayTwo;
 //the jquery to show results on the page
 $(document).ready(function() {
   //user clicks add button for playerone
@@ -324,6 +321,23 @@ $(document).ready(function() {
     console.log(overallPlayOne);
     $('#addOverallScore').html(overallPlayOne);
     $('#addCurrentScore').html(sumTurns);
+    var zero=0
+
+    if((overallPlayOne>=100) || (overallPlayTwo>=100)){
+      $('#win').show();
+      overallPlayOne=0
+      overallPlayTwo=0
+      overallPlayerOne.length = 0;
+      overallPlayerTwo.length = 0;
+      turnsPlayerOne.length = 0;
+      turnsPlayerTwo.length=0;
+      $('#addOverallScore').html(zero);
+      $('#addCurrentScore').html(zero);
+      $('#addOverallScore2').html(zero);
+      $('#addCurrentScore2').html(zero);
+    }else{
+        $('#win').hide();
+    }
     if (ty==1 ) {
       $( "#alert" ).fadeIn();
        $('#add').attr("disabled", true);
@@ -331,17 +345,16 @@ $(document).ready(function() {
     } else if (ty!=1) {
       $( "#alert" ).fadeOut();
     }
-    if(overallPlayOne==100){
-      $('#win').show();
-      overallPlayerOne.length = 0;
-      overallPlayerTwo.length = 0;
-      turnsPlayerOne.length = 0;
-      turnsPlayerTwo.length=0;
 
-    }else{
-
-    }
   });
+  $("#add").mousedown(function() {
+    $("#win").hide();
+  });
+  $("#add2").mousedown(function() {
+    $("#win").hide();
+  });
+
+
 
   //computer part does not work for now
   $("#computer").click(function() {
@@ -362,9 +375,24 @@ $(document).ready(function() {
     var dicenumbers = generateList(list, weight);
     var randomNum = rand(0, dicenumbers.length - 1);
     var ty = dicenumbers[randomNum];
-    var overallPlayerTwo = PlayerTwoChance(ty)
-    $('#addOverallScore2').html(overallPlayerTwo);
+    var overallPlayTwo = PlayerTwoChance(ty)
+    $('#addOverallScore2').html(overallPlayTwo);
     $('#addCurrentScore2').html(sumTurns2);
+    if((overallPlayOne>=100) || (overallPlayTwo>=100)){
+      $('#win').show();
+      overallPlayOne=0
+      overallPlayTwo=0
+      overallPlayerOne.length = 0;
+      overallPlayerTwo.length = 0;
+      turnsPlayerOne.length = 0;
+      turnsPlayerTwo.length=0;
+      $('#addOverallScore').html(zero);
+      $('#addCurrentScore').html(zero);
+      $('#addOverallScore2').html(zero);
+      $('#addCurrentScore2').html(zero);
+    }else{
+
+    }
     if (ty==1 ) {
       $( "#alert" ).fadeIn();
       $('#add').attr("disabled", false);
@@ -372,17 +400,10 @@ $(document).ready(function() {
     } else if (ty!=1) {
       $( "#alert" ).fadeOut();
     }
+    var zero=0
+
   });
-  if(overallPlayOne==100){
-    $('#win').show();
-    overallPlayerOne.length = 0;
-    overallPlayerTwo.length = 0;
-    turnsPlayerOne.length = 0;
-    turnsPlayerTwo.length=0;
 
-  }else{
-
-  }
 
   //actions when pass to other player for player one is clicked
   $("#remove").click(function() {
@@ -404,6 +425,7 @@ $(document).ready(function() {
     overallPlayerTwo.length = 0;
     turnsPlayerOne.length = 0;
     turnsPlayerTwo.length=0;
+    $('#win').hide();
     var zero=0;
     $('#addOverallScore').html(zero);
     $('#addCurrentScore').html(zero);
@@ -420,6 +442,8 @@ $(document).ready(function() {
     overallPlayerTwo.length = 0;
     turnsPlayerOne.length = 0;
     turnsPlayerTwo.length=0;
+    overallPlayOne=0;
+    overallPlayTwo=0
     var zero=0;
     $('#addOverallScore').html(zero);
     $('#addCurrentScore').html(zero);

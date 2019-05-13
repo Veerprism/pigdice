@@ -407,7 +407,7 @@ $(document).ready(function() {
     $('#addCurrentScore2').html(zero);
   });
   $("#rule").click(function() {
-    $( ".rules" ).fadeIn();
+    $( ".rules").toggle(250);
 
   });
   $("#win").click(function() {
@@ -421,11 +421,6 @@ $(document).ready(function() {
     $('#addCurrentScore').html(zero);
     $('#addOverallScore2').html(zero);
     $('#addCurrentScore2').html(zero);
-
-  });
-  $("#rule").mousedown(function() {
-    $(".rules").fadeOut(400);
-    $(".rules").hide();
 
   });
 

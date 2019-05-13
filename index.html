@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <script src="js/js.js" type="text/javascript"></script>
   <script src="js/underscore.js" type="text/javascript"></script>
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -16,7 +15,8 @@
       font-family: GreatVibes;
       src: url("font/GreatVibes-Regular.otf")format("opentype");
     }
-    h1{
+
+    h1 {
       font-family: GreatVibes;
       width: 100%;
       text-align: center;
@@ -25,27 +25,28 @@
       margin: 45px auto 55px auto;
       font-size: 200%;
     }
-    h1 span{
+
+    h1 span {
       background: #fff;
       padding: 0 10px;
     }
   </style>
-  </head>
+</head>
 <div class="container-fluid overall">
   <h1 class="heading"><span>The Pig Dice</span></h1>
 
-  <div class="row" >
+  <div class="row forms">
     <div class="col-md-4" id="playerone">
       <form class="form" action="index.html" method="post">
         <div class="form-group">
           <h3 class="heading">Player One</h3>
-          <label class="labeloverall"for="">Current Score<span id="addCurrentScore" class="scores"></span></label><br>
+          <label class="labeloverall" for="">Current Score<span id="addCurrentScore" class="scores"></span></label><br>
           <label for="">Overall<span id="addOverallScore" class="scores1"></span></label><br><br>
           <button type="button" name="button" id="add" class="btn buttons ">Roll</button>
           <button type="button" name="button" id="remove" class="btn buttons hvr-forward">Pass to Other Player</button>
         </div>
-        </form>
-        </div>
+      </form>
+    </div>
 
 
 
@@ -54,10 +55,11 @@
     <!-- card holding the rules of the game -->
     <div class="col-md-4 card">
       <div class="card-body rules">
-        <h1 class="card-title"><span>Rules</span></h1>
-        <p class="card-text">The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the die to the next player.Play passes from player to player until a winner is determined.</p>
+        <h1 class="card-title heading"><span>Rules</span></h1>
+        <p class="card-text">The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the die to the next
+          player.Play passes from player to player until a winner is determined.</p>
         <a href="https://www.thesprucecrafts.com/pig-dice-game-complete-rules-of-pig-411405" class="btn btn-info explanation">In-Depth Explanation</a>
-    </div>
+      </div>
 
     </div>
 
@@ -69,10 +71,10 @@
           <label for="">Current Score<span id="addCurrentScore2" class="scores2"></span></label><br>
           <label for="">Overall<span id="addOverallScore2" class="scores1"></label><br><br>
           <button type="button" name="button" id="add2" class="btn buttons">Roll</button>
-            <button type="button" name="button" id="remove2" class="btn buttons hvr-backward">Pass to Other Player</button>
-          </div>
+          <button type="button" name="button" id="remove2" class="btn buttons hvr-backward">Pass to Other Player</button>
+        </div>
       </form>
-      </div>
+    </div>
 
 
   </div>
@@ -99,16 +101,17 @@
     </div>
 
   </div>
-        <div class="col-md-12 rule">
-          <h2 class="hvr-bob" id="rule">Rules</h2>
-        </div>
-
-      </div>
+  <div class="col-md-12 rule">
+    <h2 class="hvr-bob" id="rule">Rules</h2>
   </div>
 
+</div>
+</div>
 
 
 
 
-  </body>
+
+</body>
+
 </html>

@@ -326,6 +326,8 @@ $(document).ready(function() {
     $('#addCurrentScore').html(sumTurns);
     if (ty==1 ) {
       $( "#alert" ).fadeIn();
+       $('#add').attr("disabled", true);
+        $('#add2').attr("disabled", false);
     } else if (ty!=1) {
       $( "#alert" ).fadeOut();
     }
@@ -365,6 +367,8 @@ $(document).ready(function() {
     $('#addCurrentScore2').html(sumTurns2);
     if (ty==1 ) {
       $( "#alert" ).fadeIn();
+      $('#add').attr("disabled", false);
+       $('#add2').attr("disabled", true);
     } else if (ty!=1) {
       $( "#alert" ).fadeOut();
     }

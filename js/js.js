@@ -110,7 +110,7 @@ function PlayerOneChance(randomNum) {
       }
       //if the sum is more than 100,alert the user
       else if (sum >= 100) {
-        alert('The sum is' + sum);
+        
         ending = false;
         break
         return false;
@@ -201,7 +201,7 @@ function PlayerTwoChance(randomNum) {
       }
       //if the sum is more than 100,alert the user
       else if (sum >= 100) {
-        alert('The sum is' + sum);
+        
         ending = false;
         break
         return false;
@@ -326,6 +326,8 @@ $(document).ready(function() {
     $('#addCurrentScore').html(sumTurns);
     if (ty==1 ) {
       $( "#alert" ).fadeIn();
+       $('#add').attr("disabled", true);
+        $('#add2').attr("disabled", false);
     } else if (ty!=1) {
       $( "#alert" ).fadeOut();
     }
@@ -365,6 +367,8 @@ $(document).ready(function() {
     $('#addCurrentScore2').html(sumTurns2);
     if (ty==1 ) {
       $( "#alert" ).fadeIn();
+      $('#add').attr("disabled", false);
+       $('#add2').attr("disabled", true);
     } else if (ty!=1) {
       $( "#alert" ).fadeOut();
     }
@@ -407,7 +411,7 @@ $(document).ready(function() {
     $('#addCurrentScore2').html(zero);
   });
   $("#rule").click(function() {
-    $( ".rules" ).fadeIn();
+    $( ".rules").toggle(250);
 
   });
   $("#win").click(function() {
@@ -421,11 +425,6 @@ $(document).ready(function() {
     $('#addCurrentScore').html(zero);
     $('#addOverallScore2').html(zero);
     $('#addCurrentScore2').html(zero);
-
-  });
-  $("#rule").mousedown(function() {
-    $(".rules").fadeOut(400);
-    $(".rules").hide();
 
   });
 

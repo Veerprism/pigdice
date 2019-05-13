@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="css/style.css">
   </head>
 <div class="container-fluid">
-  <div class="row  " id="playerone" >
+  <div class="row" id="playerone">
+    
     <div class="col-md-4">
       <form class="form" action="index.html" method="post">
         <div class="form-group">
@@ -33,21 +34,18 @@
         <a href="https://www.thesprucecrafts.com/pig-dice-game-complete-rules-of-pig-411405" class="btn btn-info">In-Depth Explanation</a>
     </div>
     </div>
+
     <div class="col-md-4">
       <form class="form" action="index.html" method="post">
         <div class="form-group">
           <h3>Player Two</h3>
-          <label for="">Current Score</label><br>
-          <label for="">Overall</label><br><br>
-          <button type="button" name="button" class="btn btn-primary">Roll</button>
-            <button type="button" name="button" class="btn btn-primary">Pass to Other Palyer</button>
-
-
-        </div>
-
+          <label for="">Overall<span id="addOverallScore2"></label><br><br>
+          <label for="">Current Score<span id="addCurrentScore2"></span></label><br>
+          <button type="button" name="button" id="add2" class="btn btn-primary">Roll</button>
+            <button type="button" name="button" id="remove2" class="btn btn-primary">Pass to Other Player</button>
+          </div>
       </form>
-
-    </div>
+      </div>
 
 
   </div>

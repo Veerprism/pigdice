@@ -110,7 +110,7 @@ function PlayerOneChance(randomNum) {
       }
       //if the sum is more than 100,alert the user
       else if (sum >= 100) {
-        alert('The sum is' + sum);
+        
         ending = false;
         break
         return false;
@@ -201,7 +201,7 @@ function PlayerTwoChance(randomNum) {
       }
       //if the sum is more than 100,alert the user
       else if (sum >= 100) {
-        alert('The sum is' + sum);
+        
         ending = false;
         break
         return false;

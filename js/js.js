@@ -18,7 +18,7 @@ var generateList = function(list, weight) {
 };
 
 var list = [1, 2, 3, 4, 5, 6];
-var weight = [0.1, 0.2, 0.2, 0.2, 0.2, 0.1];
+var weight = [0.05, 0.05, 0.3, 0.3, 0.2, 0.1];
 var weighedList = generateList(list, weight);
 var randomNum = rand(0, weighedList.length - 1);
 
@@ -322,7 +322,7 @@ $(document).ready(function() {
     $('#addOverallScore').html(overallPlayOne);
     $('#addCurrentScore').html(sumTurns);
     var zero=0
-
+    $('#diceroll').html(ty);
     if((overallPlayOne>=100) || (overallPlayTwo>=100)){
       $('#win').show();
       overallPlayOne=0
@@ -342,6 +342,7 @@ $(document).ready(function() {
       $( "#alert" ).fadeIn();
        $('#add').attr("disabled", true);
         $('#add2').attr("disabled", false);
+          $('#diceroll').html("");
     } else if (ty!=1) {
       $( "#alert" ).fadeOut();
     }
@@ -378,6 +379,7 @@ $(document).ready(function() {
     var overallPlayTwo = PlayerTwoChance(ty)
     $('#addOverallScore2').html(overallPlayTwo);
     $('#addCurrentScore2').html(sumTurns2);
+    $('#diceroll2').html(ty);
     if((overallPlayOne>=100) || (overallPlayTwo>=100)){
       $('#win').show();
       overallPlayOne=0
@@ -397,6 +399,7 @@ $(document).ready(function() {
       $( "#alert" ).fadeIn();
       $('#add').attr("disabled", false);
        $('#add2').attr("disabled", true);
+         $('#diceroll2').html("");
     } else if (ty!=1) {
       $( "#alert" ).fadeOut();
     }
@@ -408,7 +411,8 @@ $(document).ready(function() {
   //actions when pass to other player for player one is clicked
   $("#remove").click(function() {
     turnsPlayerOne.length = 0;
-    $
+      $('#addCurrentScore').html("")
+    $('#diceroll').html("");
      $('#add').attr("disabled", true);
       $('#add2').attr("disabled", false);
     });
@@ -416,6 +420,8 @@ $(document).ready(function() {
     //actions when pass to other player for player two is clicked
   $("#remove2").click(function() {
     turnsPlayerTwo.length = 0;
+    $('#addCurrentScore2').html("");
+    $('#diceroll2').html("");
      $('#add2').attr("disabled", true);
       $('#add').attr("disabled", false);
     console.log(turnsPlayerTwo);
@@ -425,6 +431,8 @@ $(document).ready(function() {
     overallPlayerTwo.length = 0;
     turnsPlayerOne.length = 0;
     turnsPlayerTwo.length=0;
+    $('#diceroll').html("");
+    $('#diceroll2').html("");
     $('#win').hide();
     var zero=0;
     $('#addOverallScore').html(zero);

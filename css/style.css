@@ -91,6 +91,27 @@ img{
   display: flex;
   justify-content: center;
 }
+#diceroll{
+  width: 200px;
+  padding: 15px;
+  margin-top: 20px;
+
+  border-color:#7b0e8c;
+  border-width: medium;
+  border-style: solid;
+}
+#diceroll2{
+  width: 200px;
+  padding: 15px;
+  margin-top: 20px;
+  border-color:#7b0e8c;
+  border-width:medium;
+  border-style: solid;
+}
+.dice{
+    color:#7b0e8c;
+    font-size: 200%;
+}
 #alert{
   display: none;
   color:#7b0e8c;
